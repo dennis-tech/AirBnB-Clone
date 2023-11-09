@@ -42,6 +42,9 @@ section {
 .card {
     width: 175px;
     font-size: 12px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .card--image {
@@ -56,4 +59,12 @@ section {
 
 .card--star {
     height: 14px;
+}
+
+.card__title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card__price {
+    margin-top: auto;
 }
