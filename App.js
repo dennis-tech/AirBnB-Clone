@@ -5,24 +5,19 @@ import Card from "./components/Card"
 import data from "./data"
 
 export default function App() {
-    // <Hero/>
+    
     const cards = data.map(item => {
         return (
             <Card
             key={item.id}
-            img={item.coverImg}
-            rating={item.stats.rating}
-            reviewCount={item.stats.reviewCount}
-            location={item.location}
-            title={item.title}
-            price={item.price}
-            openSpots={item.openSpots}
+            {...item}
             />
         )
     })
     return (
         <div>
             <Navbar />
+            <Hero/>
             <section className="cards__list">
                 {cards}
             </section>
